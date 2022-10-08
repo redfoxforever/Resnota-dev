@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --main-font: 'Noto Sans', sans-serif;
+    --main-blue-color: #0E2149;
+    --primary-color: #111;
+    --text-color: #B8C1CA;
+    --more-text-color: #717171;
+    --main-yellow-color: #D79F43;
+    --error-color: #FF0000;
+    --main-white-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, 
+h3, h4,
+h5, h6 {
+    color: var(--main-blue-color);
+}
+
+p {
+    color: var(--primary-color);
+    font-size: calc(13px + 2 * (100vw / 1920));
+
+    &.light-text {
+        color: var(--main-white-color);
+    }
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+label {
+    font-size: calc(13px + 2 * (100vw / 1920));
+}
+
+.container {
+    max-width: 1230px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--main-white-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-blue-color);
+}
+
+.blue-link {
+    max-width: 115px;
+    min-width: 105px;
+    width: 100%;
+    max-height: 45px;
+    min-height: 45px;
+    height: 100%;
+    background: var(--main-blue-color);
+    transition: .4s;
+    font-size: calc(16px + 2 * (100vw / 1920));
+    display: grid;
+    place-items: center;
+    color: var(--main-white-color);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+
+    &:hover {
+        background-color: #1D3976;
+    }
+}
+
+.yellow-link {
+    max-width: 160px;
+    min-width: 120px;
+    width: 100%;
+    max-height: 45px;
+    min-height: 45px;
+    height: 100%;
+    background: var(--main-yellow-color);
+    transition: .4s;
+    font-size: calc(16px + 2 * (100vw / 1920));
+    display: grid;
+    place-items: center;
+    color: var(--main-white-color);
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: #D5AF86;
+    }
+}
+
+h1 {
+    font-size: calc(42px + 10 * (100vw / 1920));
+    color: var(--main-blue-color);
+
+    &.light-title {
+        color: var(--main-white-color);
+    }
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+h2 {
+    font-size: calc(36px + 6 * (100vw / 1920));
+    color: var(--main-blue-color);
+
+    &.light-title {
+        color: var(--main-white-color);
+    }
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+h3 {
+    font-size: calc(25px + 7 * (100vw / 1920));
+    color: var(--main-blue-color);
+
+    &.light-title {
+        color: var(--main-white-color);
+    }
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+.header-swiper {
+    .swiper-pagination-bullet {
+        min-width: 15px;
+        min-height: 15px;
+        max-width: 15px;
+        max-height: 15px;
+        width: 100%;
+        height: 100%;
+        background: var(--main-white-color);
+        opacity: 0.4;
+
+        &.swiper-pagination-bullet-active {
+            background: var(--main-white-color);
+            opacity: 1;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: var(--main-white-color);
+    }
+
+    .swiper-button-prev {
+        left: 10%;
+    }
+
+    .swiper-button-next {
+        right: 10%;
+    }
+}
+
+
+@media (min-width: 1920px) {
+    .blue-link {
+        font-size: 18px !important;
+    }
+
+    .yellow-link {
+        font-size: 18px !important;
+    }
+
+    h1 {
+        font-size: 52px !important;
+    }
+
+    h2 {
+        font-size: 42px !important;
+    }
+
+    h3 {
+        font-size: 32px !important;
+    }
+
+    p {
+        font-size: 15px !important;
+    }
+
+    label {
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .blue-link {
+        font-size: calc(16px + (2 + 2 * 0.7) * ((100vw - 320px)/ 1920));
+    }
+
+    .yellow-link {
+        font-size: calc(16px + (2 + 2 * 0.7) * ((100vw - 320px)/ 1920));
+    }
+
+    h1 {
+        font-size: calc(42px + (10 + 10 * 0.7) * ((100vw - 320px)/ 1920));
+    }
+
+    h2 {
+        font-size: calc(36px + (6 + 6 * 0.7) * ((100vw - 320px)/ 1920));
+    }
+
+    h3 {
+        font-size: calc(25px + (7 + 7 * 0.7) * ((100vw - 320px)/ 1920));
+    }
+
+    p {
+        font-size: calc(13px + (2 + 2 * 0.7) * ((100vw - 320px)/ 1920));
+    }
+
+    label {
+        font-size: calc(13px + (2 + 2 * 0.7) * ((100vw - 320px)/ 1920));
+    }
+}
